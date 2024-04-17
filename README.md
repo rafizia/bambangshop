@@ -77,7 +77,22 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Menurut saya kita perlu menggunakan interface/trait karena salah satu alasan utama penggunaan interface dalam Observer pattern adalah untuk memungkinkan berbagai jenis observer untuk dapat merespons pemberitahuan dari notification dengan implementasinya masing-masing sendiri. Selain itu dengan menggunakan interface kita dapat dengan mudah menambahkan berbagai jenis observer dengan mudah.
+
+2. Menurut saya, jika aplikasi memiliki jumlah subscriber yang relatif kecil dan kinerja bukan merupakan suatu masalah, penggunaan Vec mungkin sudah cukup dan lebih mudah untuk diterapkan. Namun, jika aplikasi perlu menangani subscriber dalam jumlah besar dan memerlukan operasi pencarian yang efisien berdasarkan `id` atau `url`, maka kita perlu menggunakan DashMap.
+
+3. Menurut saya, kita dapat menggunakan Singleton pattern untuk memastikan keunikan dan keamanan thread dengan kinerja tinggi untuk operasi bersamaan. Singleton pattern adalah pendekatan yang disarankan untuk skenario yang memerlukan akses global dan manajemen konkurensi tinggi.
 
 #### Reflection Publisher-2
+1. Menurut saya, kita memerlukan pemisahan untuk mengelola kompleksitas secara efektif, terutama dalam aplikasi berskala besar. Dengan memisahkan logika bisnis dan penyimpanan data ke dalam lapisan Service dan Repository yang terpisah, kita dapat membuat aplikasi yang lebih mudah untuk diuji dan di-maintain.
+
+2. Jika kita hanya menggunakan Model dalam desain aplikasi dimana masing-masing Model mencakup manajemen data, logika bisnis, dan logika interaksinya sendiri, hal ini dapat meningkatkan kompleksitas setiap model secara signifikan dan menimbulkan beberapa masalah seperti sulitnya testing dan maintenance.
+
+3. Salah satu fitur yang sering saya gunakan dari Postman adalah fitur API Requests Crafting and Testing dimana kita dapat dengan mudah membuat request untuk memverifikasi endpoints API. Fitur ini mendukung berbagai metode request seperti GET, POST, PUT, DELETE, dan lain-lain.
 
 #### Reflection Publisher-3
+1. Menurut saya pada tutorial ini kita menerapkan model Push dari Observer Pattern.
+
+2. Beberapa kelebihan Model Pull antara lain: dapat mengurangi network traffic dan potensi scalability yang lebih baik, namun model ini juga memiliki beberapa kekurangan seperti peningkatan latensi dan tidak efisien untuk frequent update.
+
+3. Jika tidak menggunakan multi-threading maka dapat berpotensi untuk menimbulkan beberapa masalah seperti masalah performa, masalah scalability, dan sulitnya penanganan error.
